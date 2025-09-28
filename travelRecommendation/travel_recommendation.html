@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Travel Recommendation</title>
+    <style>
+      /* Basic styling for navbar */
+      nav {
+        background-color: #0077cc;
+        padding: 10px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      nav .left,
+      nav .right {
+        display: flex;
+        align-items: center;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-right: 15px;
+        font-weight: bold;
+      }
+      nav input[type="text"] {
+        padding: 5px;
+      }
+      nav button {
+        padding: 5px 10px;
+        margin-left: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="left">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="right">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search recommendations..."
+        />
+        <button onclick="performSearch()">Search</button>
+        <button onclick="clearResults()">Reset</button>
+      </div>
+    </nav>
+
+    <!-- Results will be shown here -->
+    <div id="searchResults"></div>
+
+    <!-- Link to external JS -->
+    <script src="travel_recommendation.js"></script>
+  </body>
+</html>
